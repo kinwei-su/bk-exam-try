@@ -1,0 +1,5 @@
+export APP_ID="bk-exam-try"
+export APP_TOKEN="11b1c583-5b01-48f9-9a57-7d8d286314f9"
+export RUN_VER="open"
+export BK_URL="http://paas.bktencent.com"
+export BK_PAAS_HOST="http://paas.bktencent.com"
