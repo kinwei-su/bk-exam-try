@@ -42,8 +42,8 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": APP_CODE,  # noqa
         "USER": "root",
-        "PASSWORD": "12345678",
-        "HOST": "localhost",
+        "PASSWORD": "OtGh_BKuvUbJ",
+        "HOST": "192。168。169。132",
         "PORT": "3306",
         # 单元测试 DB 配置，建议不改动
         "TEST": {"NAME": "test_db", "CHARSET": "utf8", "COLLATION": "utf8_general_ci"},
