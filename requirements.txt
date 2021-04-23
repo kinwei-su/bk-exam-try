@@ -3,7 +3,7 @@
 # 需要额外的python包，可直接在文件后面添加
 # 请确保指定的包和版本号，可通过pip安装
 
-# blueapps requirement
+# blueapps requirements
 Django==2.2.6
 mysqlclient==1.4.4
 MarkupSafe==1.1.1
