@@ -38,11 +38,11 @@ DATABASES.update(  # noqa
     {
         "default": {
             "ENGINE": "django.db.backends.mysql",
-            "NAME": os.getenv("BKAPP_DB_NAME", ""),  # 数据库名
-            "USER": os.getenv("BKAPP_DB_USERNAME", ""),  # 数据库用户
-            "PASSWORD": os.getenv("BKAPP_DB_PASSWORD", ""),  # 数据库密码
-            "HOST": os.getenv("BKAPP_DB_HOST", ""),  # 数据库主机
-            "PORT": os.getenv("BKAPP_DB_PORT", "3306"),  # 数据库端口
+            "NAME": APP_ID,  # 数据库名
+            "USER": "root",  # 数据库用户
+            "PASSWORD": "OtGh_BKuvUbJ",  # 数据库密码
+            "HOST": "192.168.169.132",  # 数据库主机
+            "PORT": "3306",  # 数据库端口
         },
     }
 )
