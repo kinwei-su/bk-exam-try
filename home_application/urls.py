@@ -20,10 +20,8 @@ urlpatterns = (
     url(r"^login_info/$", views.login_info),
     url(r"^test_get/$", views.test_get),
     url(r"^test_post/$", views.test_post),
-    url(r"^search_bussiness_topo/$", views.search_bussiness_topo),
     url(r"^search_bussiness/$", views.search_bussiness),
-    url(r"^search_base_info/$", views.search_base_info),
-    url(r"^search_host_list/$", views.search_host_list),
-    url(r"^query_detail/$", views.query_detail),
-    url(r"^query_node_info/$", views.query_node_info),
+    url(r"^get_all_hosts/$", views.get_all_hosts),
+    url(r"^search_instance/$", views.search_instance),
+
 )

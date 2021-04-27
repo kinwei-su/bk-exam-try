@@ -19,6 +19,9 @@ from urllib.parse import urlparse
 # This will make sure the app is always imported when
 # Django starts so that shared_task will use this app.
 from blueapps.core.celery import celery_app
+import pymysql
+
+pymysql.install_as_MySQLdb()
 
 __all__ = ["celery_app", "RUN_VER", "APP_CODE", "SECRET_KEY", "BK_URL", "BASE_DIR"]
 
@@ -38,7 +41,7 @@ def get_env_or_raise(key):
 
 
 # 应用 ID
-APP_ID = APP_CODE = os.getenv("APP_ID", "")
+APP_ID = APP_CODE = os.getenv("APP_ID", "bk-exam-try")
 # 应用用于调用云 API 的 Secret
 APP_TOKEN = SECRET_KEY = os.getenv("APP_TOKEN", "")
 
