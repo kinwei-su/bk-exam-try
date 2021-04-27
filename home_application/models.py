@@ -96,6 +96,7 @@ class Instance(BaseModel, PublicFields):
     name= models.CharField(verbose_name="实例名称", max_length=255, unique=True)
     host = models.CharField(verbose_name="主机IP", max_length=255, unique=True)
     port = models.CharField(verbose_name="端口", max_length=255)
+
     biz_name = models.CharField(verbose_name="业务名称", max_length=255)
     version = models.CharField(verbose_name="版本", max_length=255)
     status = models.CharField(verbose_name="部署状态", max_length=255)

@@ -1,16 +1,54 @@
 <template>
     <div id="grid">
-        <div class="Titles font-20">业务拓扑</div>
-        <bk-resize-layout :collapsible="true" style="height: 500px;">
-            <div slot="aside">aside</div>
-            <div slot="main">main</div>
-        </bk-resize-layout>
+        <div class="Titles font-20">Icon 图标</div>
+        <div class="summary font-18">概述</div>
+        <div class="summaryContent font-14">为保证视觉效果与美观，要求默认图标可点击热区比实际大小要多8px/4px/2px。图标建议使用矢量图标文字库或svg格式
+            文件，防止图标失真模糊。可参考view UI图标库。
+        </div>
+        <div class="transverse">
+        </div>
+        <div class="transverse-Inco">
+            <div class="icon-Tips font-14">
+                如大小为16px*16px的图标，图形不规则时可适当调整大小。可点击热区为24*24px。
+            </div>
+            <div class="icon-24px img-24">
+            </div>
+            <div class="icon-24px">
+                <Icon type="ios-expand"/>
+            </div>
+            <div class="icon-24px">
+                <Icon type="ios-browsers-outline"/>
+            </div>
+            <div class="icon-24px">
+                <Icon type="ios-redo-outline"/>
+            </div>
+            <div class="icon-24px">
+                <Icon type="ios-close-circle-outline"/>
+            </div>
+            <div class="icon-24px">
+                <Icon type="ios-heart-outline"/>
+            </div>
+            <div class="icon-24px">
+                <Icon type="ios-checkmark-circle-outline"/>
+            </div>
+            <div class="icon-24px">
+                <Icon type="ios-search-outline"/>
+            </div>
+        </div>
+        <div class="icon-Size-sty font-14">建议使用图标大小：</div>
+        <div class="icon-Size-sty font-14">80px*80px、</div>
+        <div class="icon-Size-sty font-14">40px*40px、</div>
+        <div class="icon-Size-sty font-14">32px*32px、</div>
+        <div class="icon-Size-sty font-14">20px*20px、</div>
+        <div class="icon-Size-sty font-14">16px*16px、</div>
+        <div class="icon-Size-sty font-14">12px*12px （图标大小仅参考）</div>
+        <div class="icon-Size-sty font-14">不够地方用透明补全。长宽不相等时，可适当增加宽度或高度使图标在视觉上大小统一。</div>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'grid'
+        name: 'icon'
     }
 </script>
 
@@ -33,6 +71,55 @@
             margin-top: 10px;
         }
 
+        .icon-Size-sty {
+            height: 25px;
+            width: 100%;
+            line-height: 20px;
+            margin-top: 2px;
+        }
+
+        .transverse {
+            margin-left: 4px;
+            /*border: 1px solid red;*/
+            width: 61%;
+            background: url("../../assets/base/img/icons.svg") no-repeat;
+            background-size: contain;
+            height: 88px !important;
+
+            .transverseIcons {
+                width: 25%;
+                height: 50%;
+                float: left;
+            }
+        }
+
+        .transverse-Inco {
+            margin-left: 4px;
+            width: 100%;
+            height: 20% !important;
+
+            .icon-Tips {
+                width: 100%;
+                height: 40px;
+                margin-top: 32px;
+                line-height: 40px;
+            }
+
+            .icon-24px {
+                width: 5%;
+                height: 24px;
+                font-size: 24px;
+                margin-top: 22px;
+                line-height: 18px;
+                float: left;
+            }
+
+            .img-24 {
+                background: url("../../assets/base/img/icon24PX.svg") no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+
         .vertical {
             height: 40px;
             width: 100%;
@@ -40,224 +127,18 @@
             margin-top: 20px;
         }
 
-        .transverse {
+        .summaryContent {
+            height: 40px;
             width: 100%;
-            height: 70%;
-            background: url("../../assets/base/img/grid.svg") no-repeat;
-            background-size: 100% 100%;
-
-            .photo {
-                vertical-align: middle;
-                display: inline-block;
-                width: 100%;
-                height: 100%;
-            }
-
-            .transverseTop {
-                width: 100%;
-                color: #ffffff;
-                text-align: center;
-                line-height: 100px;
-                height: 25%;
-            }
-
-            .transverseContentleft {
-                width: 216px;
-                height: 8%;
-                float: left;
-            }
-
-            .transverseContent {
-                width: calc(100% - 248px);
-                margin-left: 16px;
-                margin-right: 16px;
-                text-align: center;
-                float: right;
-                height: 8%;
-                line-height: 35px;
-            }
-
-            .verticalContentText {
-                width: calc(100% - 248px);
-                margin-left: 16px;
-                margin-right: 16px;
-                text-align: center;
-                height: 10%;
-                line-height: 35px;
-            }
-
-            .verticalContent {
-                height: 90%;
-                width: calc(100% - 32px);
-                margin-left: 16px;
-                margin-right: 16px;
-                background-image: linear-gradient(90deg, #f5f5f5 4.16666667%, transparent 0, transparent 8.33333333%, #f5f5f5 0, #f5f5f5 12.5%, transparent 0, transparent 16.66666667%, #f5f5f5 0, #f5f5f5 20.83333333%, transparent 0, transparent 25%, #f5f5f5 0, #f5f5f5 29.16666667%, transparent 0, transparent 33.33333333%, #f5f5f5 0, #f5f5f5 37.5%, transparent 0, transparent 41.66666667%, #f5f5f5 0, #f5f5f5 45.83333333%, transparent 0, transparent 50%, #f5f5f5 0, #f5f5f5 54.16666667%, transparent 0, transparent 58.33333333%, #f5f5f5 0, #f5f5f5 62.5%, transparent 0, transparent 66.66666667%, #f5f5f5 0, #f5f5f5 70.83333333%, transparent 0, transparent 75%, #f5f5f5 0, #f5f5f5 79.16666667%, transparent 0, transparent 83.33333333%, #f5f5f5 0, #f5f5f5 87.5%, transparent 0, transparent 91.66666667%, #f5f5f5 0, #f5f5f5 95.83333333%, transparent 0);
-
-                .vertical100 {
-                    width: 100%;
-                    line-height: 45px;
-                    height: calc(25% - 20px);
-                }
-
-                .verticalItem {
-                    width: 100%;
-                    height: calc(25% - 20px);
-                    margin-top: 26px;
-
-                    .verticalSty {
-                        float: left;
-                        height: 100%;
-                        line-height: 50px;
-                    }
-
-                    .vertical-50-left {
-                        width: calc(50% - 8px);
-                    }
-
-                    .vertical-50-right {
-                        width: calc(50% - 8px);
-                        margin-left: 16px;
-                    }
-
-                    .vertical-33-left {
-                        width: calc(33.33% - 10.66px);;
-                    }
-
-                    .vertical-33-center {
-                        width: calc(33.33% - 10.66px);;
-                        margin-left: 16px;
-                    }
-
-                    .vertical-33-right {
-                        width: calc(33.33% - 10.66px);;
-                        margin-left: 16px;
-                    }
-
-                    .vertical-25-right {
-                        width: calc(25% - 8px);;
-                    }
-
-                    .vertical-75-right {
-                        width: calc(75% - 8px);;
-                        margin-left: 16px;
-                    }
-                }
-            }
-
-            .transverseBottom {
-                width: 100%;
-                height: 67%;
-
-                .leftNavigation {
-                    width: 216px;
-                    text-align: center;
-                    color: #ffffff;
-                    line-height: 220px;
-                    float: left;
-                    height: 100%;
-                }
-
-                .leftContent {
-                    width: calc(100% - 248px);
-                    margin-left: 16px;
-                    margin-right: 16px;
-                    height: 100%;
-                    display: inline-block;
-                    float: left;
-                    background-image: linear-gradient(90deg, #f5f5f5 4.16666667%, transparent 0, transparent 8.33333333%, #f5f5f5 0, #f5f5f5 12.5%, transparent 0, transparent 16.66666667%, #f5f5f5 0, #f5f5f5 20.83333333%, transparent 0, transparent 25%, #f5f5f5 0, #f5f5f5 29.16666667%, transparent 0, transparent 33.33333333%, #f5f5f5 0, #f5f5f5 37.5%, transparent 0, transparent 41.66666667%, #f5f5f5 0, #f5f5f5 45.83333333%, transparent 0, transparent 50%, #f5f5f5 0, #f5f5f5 54.16666667%, transparent 0, transparent 58.33333333%, #f5f5f5 0, #f5f5f5 62.5%, transparent 0, transparent 66.66666667%, #f5f5f5 0, #f5f5f5 70.83333333%, transparent 0, transparent 75%, #f5f5f5 0, #f5f5f5 79.16666667%, transparent 0, transparent 83.33333333%, #f5f5f5 0, #f5f5f5 87.5%, transparent 0, transparent 91.66666667%, #f5f5f5 0, #f5f5f5 95.83333333%, transparent 0);
-
-                    .content100 {
-                        width: 100%;
-                        line-height: 45px;
-                        height: calc(25% - 20px);
-                    }
-
-                    .contentItem {
-                        width: 100%;
-                        height: calc(25% - 20px);
-                        margin-top: 26px;
-
-                        .contentSty {
-                            float: left;
-                            height: 100%;
-                            line-height: 50px;
-                        }
-
-                        .content-50-left {
-                            width: calc(50% - 8px);
-                        }
-
-                        .content-50-right {
-                            width: calc(50% - 8px);
-                            margin-left: 16px;
-                        }
-
-                        .content-33-left {
-                            width: calc(33.33% - 10.66px);;
-                        }
-
-                        .content-33-center {
-                            width: calc(33.33% - 10.66px);;
-                            margin-left: 16px;
-                        }
-
-                        .content-33-right {
-                            width: calc(33.33% - 10.66px);;
-                            margin-left: 16px;
-                        }
-
-                        .content-25-left {
-                            width: calc(25% - 12px);;
-                        }
-
-                        .content-25-left-center {
-                            width: calc(25% - 12px);;
-                            margin-left: 16px;
-                        }
-
-                        .content-25-right {
-                            width: calc(25% - 12px);;
-                            margin-left: 16px;
-                        }
-                    }
-                }
-            }
-        }
-
-        .tipSty {
-            width: 100%;
-            margin-top: 16px;
-            height: 80px;
-            line-height: 35px;
-        }
-
-        .rule {
-            width: 100%;
-            margin-top: 16px;
-            margin-bottom: 16px;
-            height: 80px;
-            line-height: 35px;
-        }
-
-        .formula {
-            width: 100%;
-            margin-top: 16px;
-            height: 65px;
-            line-height: 35px;
+            margin-left: 5px;
+            line-height: 20px;
+            margin-top: 10px;
         }
     }
 </style>
 <style scoped>
     .backColor {
-        background-color: #88c4ff;
-    }
-
-    .lightBackColor {
-        background-color: #b0d7ff;
-    }
-
-    .hightBackColor {
-        background-color: #399CFF;
+        background-color: #61B0ff;
     }
 
     .textSty {

@@ -7,7 +7,7 @@
         </div>
         <div class="title PingFang">
             <router-link to="/">
-                第一次作业
+                VUE框架
             </router-link>
         </div>
         <div class="menu">

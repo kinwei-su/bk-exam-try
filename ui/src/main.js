@@ -30,7 +30,6 @@ import Component from './components/index.js'
 //vuex
 import store from './store/index'
 import 'jquery'
-
 Vue.use(ElementUI);
 Vue.use(ViewUI);
 Vue.use(Echarts);
