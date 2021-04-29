@@ -20,7 +20,7 @@ urlpatterns = (
     url(r"^login_info/$", views.login_info),
     url(r"^test_get/$", views.test_get),
     url(r"^test_post/$", views.test_post),
-    url(r"^search_bussiness/$", views.search_bussiness),
+    url(r"^search_business/$", views.search_business),
     url(r"^get_all_hosts/$", views.get_all_hosts),
     url(r"^search_instance/$", views.search_instance),
 

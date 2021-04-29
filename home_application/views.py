@@ -53,7 +53,7 @@ def test_get(request):
 @login_exempt
 @csrf_exempt
 @require_GET
-def search_bussiness(request):
+def search_business(request):
     """
     response
 {
