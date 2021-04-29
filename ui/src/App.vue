@@ -1,13 +1,14 @@
 <template>
     <div id='app' @click="cancel">
-        <Header :menu-list="headerList"></Header>
-        <Container :menu-list="menuList" class="container-style"></Container>
+        <Header></Header>
+        <Container></Container>
     </div>
 </template>
 
 <script>
-    import Header from '@/components/base/header'
+    // import Header from '@/components/base/header'
     import Container from '@/components/base/container'
+    import Header from '../src/views/home/components/header'
 
     export default {
         name: 'App',
@@ -25,137 +26,7 @@
             return {
                 headerHeight: 60,
                 //框架原始左侧导航栏
-                menuList: [
-                    {
-                        name: 'Grid',
-                        cnName: '栅格',
-                        to: '/grid',
-                        icon: 'ios-grid-outline',
-                        hasChild: false,
-                        children: []
-                    },
-                    {
-                        name: 'Layout',
-                        cnName: '布局',
-                        to: '/layout',
-                        icon: 'ios-browsers-outline',
-                        hasChild: false,
-                    },
-                    {
-                        name: 'Color',
-                        cnName: '色彩',
-                        to: '/color',
-                        icon: 'ios-color-fill-outline',
-                        hasChild: false,
-                    },
-                    {
-                        name: 'Font',
-                        cnName: '字体',
-                        to: '/font',
-                        icon: 'ios-at-outline',
-                        hasChild: false,
-                    },
-                    {
-                        name: 'Icon',
-                        cnName: '图标',
-                        to: '/icon',
-                        icon: 'ios-heart-outline',
-                        hasChild: false,
-                    }, {
-                        name: 'Card',
-                        cnName: '卡片',
-                        to: '/card',
-                        icon: 'ios-card-outline',
-                        hasChild: false,
-                    }, {
-                        name: 'Collapse',
-                        cnName: '折叠面板',
-                        to: '/collapse',
-                        icon: 'ios-albums-outline',
-                        hasChild: false,
-                    },
-                    {
-                        name: 'Apply',
-                        cnName: '应用',
-                        to: '/apply',
-                        icon: 'ios-at-outline',
-                        hasChild: false,
-                    }, {
-                        name: 'Button',
-                        cnName: '按钮',
-                        to: '/button',
-                        icon: 'ios-radio-button-off',
-                        hasChild: false,
-                    }, {
-                        name: 'Border',
-                        cnName: '边框',
-                        to: '/border',
-                        icon: 'ios-bookmark-outline',
-                        hasChild: false,
-                    }, {
-                        name: 'InstancePage',
-                        cnName: '示例',
-                        to: '/instancePage',
-                        icon: 'ios-document-outline',
-                        hasChild: true,
-                        children: [{
-                            cnName: '示例页面',
-                            hasChild: false,
-                            key: 1,
-                            to: '/instancePage'
-                        }],
-                    }
-                ],
                 //顶部导航栏
-                headerList: [
-                    {
-                        name: 'Grid',
-                        cnName: '栅格',
-                        to: '/grid',
-                        icon: 'ios-grid-outline',
-                        hasChild: false,
-                        children: []
-                    },
-                    {
-                        name: 'Layout',
-                        cnName: '布局',
-                        to: '/layout',
-                        icon: 'ios-browsers-outline',
-                        hasChild: false,
-                    },
-                    {
-                        name: 'Color',
-                        cnName: '色彩',
-                        to: '/color',
-                        icon: 'ios-color-fill-outline',
-                        hasChild: false,
-                    },
-                    {
-                        name: 'Font',
-                        cnName: '字体',
-                        to: '/font',
-                        icon: 'ios-at-outline',
-                        hasChild: false,
-                    },
-                    {
-                        name: 'Icon',
-                        cnName: '图标',
-                        to: '/icon',
-                        icon: 'ios-heart-outline',
-                        hasChild: false,
-                    }, {
-                        name: 'InstancePage',
-                        cnName: '示例',
-                        to: '/instancePage',
-                        icon: 'ios-document-outline',
-                        hasChild: true,
-                        children: [{
-                            cnName: '示例页面',
-                            hasChild: false,
-                            key: 1,
-                            to: '/instancePage'
-                        }],
-                    }],
             }
         },
         methods: {
