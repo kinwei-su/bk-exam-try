@@ -1,6 +1,13 @@
 <template>
   <div>
-      <Table border :columns="column" :data="data"></Table>
+      <Table border :columns="column" :data="data">
+            <template slot-scope="{ row }" slot="operate">
+                <strong>{{ row.name }}</strong>
+            </template>
+            <template slot-scope="{ row, index }" slot="action">
+                <p style="margin-right: 5px" @click="deleteInstance(index)">删除</p>
+            </template>
+      </Table>
   </div>
 </template>
 
@@ -40,13 +47,17 @@ export default {
                 },
                 {
                     title: '操作',
-                    key: 'operate'
+                    slot: 'operate'
                 },
             ],
             data: [
 
             ]
             }
+    },
+    methods: {
+        deleteInstance (index) {
+        }
     }
 
 }
